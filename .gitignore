@@ -1,0 +1,17 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore shared object files
+*.so
+
+# Ignore ONNX model files
+*.onnx
+
+# Ignore Docker-related files
+workspace/models
+
+# Ignore any temporary or backup files
+*.tmp
+*.bak
+*.swp
