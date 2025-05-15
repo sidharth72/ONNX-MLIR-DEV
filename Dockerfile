@@ -52,4 +52,4 @@ ENV PATH=$PATH:/workdir/onnx-mlir/build/Debug/bin/:/workdir/onnx-mlir/build/Debu
 
 # Run Docker
 
-# docker run --rm -it -v /home/mcw/sidharth/onnx-mlir-dev/DockerOnnxMlir/workspace:/workdir/workspace onnx-mlir-dev-env /bin/bash
+# docker run --rm -it -v /home/mcw/sidharth/onnx-mlir-dev/DockerOnnxMlir/workspace:/workdir/ onnx-mlir-dev-env /bin/bash
