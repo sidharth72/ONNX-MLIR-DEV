@@ -12,6 +12,7 @@ workspace/llvm-project
 
 # Ignore Docker-related files
 workspace/models
+workspace/tutorials
 
 # Ignore any temporary or backup files
 *.tmp
