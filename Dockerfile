@@ -1,6 +1,6 @@
 FROM ghcr.io/onnxmlir/onnx-mlir-dev
-WORKDIR /workdir
-ENV HOME=/workdir
+WORKDIR /workdir/workspace
+ENV HOME=/workdir/workspace
 
 # 1) Install packages.
 ENV PATH=$PATH:/workdir/bin
@@ -35,8 +35,8 @@ RUN apt-get install -y ssh-client
 
 # 4) When using a personal workspace folder, set your workspace sub-directory
 #    in the Dockerfile dir and uncomment the two lines below.
-#WORKDIR /workdir/workspace
-#ADD workspace /workdir/workspace
+WORKDIR /workdir/workspace
+ADD workspace /workdir/workspace
 
 # 5) Fix git by reattaching head and making git see other branches than main.
 WORKDIR /workdir/onnx-mlir
@@ -52,4 +52,10 @@ ENV PATH=$PATH:/workdir/onnx-mlir/build/Debug/bin/:/workdir/onnx-mlir/build/Debu
 
 # Run Docker
 
+# docker build -t onnx-mlir-dev-env .
+
 # docker run --rm -it -v /home/mcw/sidharth/onnx-mlir-dev/DockerOnnxMlir/workspace:/workdir/ onnx-mlir-dev-env /bin/bash
+
+# Set up git config for nnpa
+# export GIT_CONFIG_GLOBAL=/root/.gitconfig
+# git config --global --add safe.directory /workdir/onnx-mlir/build/src/Accelerators/NNPA/zDNN/src/zdnn

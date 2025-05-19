@@ -8,6 +8,7 @@ __pycache__/
 # Ignore ONNX model files
 *.onnx
 build
+workspace/llvm-project
 
 # Ignore Docker-related files
 workspace/models

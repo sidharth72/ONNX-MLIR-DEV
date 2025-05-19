@@ -1,1 +1,0 @@
-/workdir/onnx-mlir/build/Debug/lib/PyRuntime.py
